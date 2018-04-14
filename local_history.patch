@@ -1,0 +1,202 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(date 1523081696000)
++++ app/src/main/res/layout/activity_main.xml	(date 1523081696000)
+@@ -10,12 +10,12 @@
+     <Button
+         android:id="@+id/randomBtn"
+         android:layout_width="164dp"
+-        android:layout_height="78dp"
+-        android:layout_marginBottom="64dp"
+-        android:layout_marginEnd="98dp"
+-        android:layout_marginLeft="98dp"
+-        android:layout_marginRight="98dp"
+-        android:layout_marginStart="98dp"
++        android:layout_height="136dp"
++        android:layout_marginBottom="185dp"
++        android:layout_marginEnd="123dp"
++        android:layout_marginLeft="124dp"
++        android:layout_marginRight="123dp"
++        android:layout_marginStart="124dp"
+         android:text="Randomize"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+@@ -24,138 +24,52 @@
+     <TextView
+         android:id="@+id/TextView"
+         android:layout_width="295dp"
+-        android:layout_height="63dp"
+-        android:layout_marginEnd="32dp"
+-        android:layout_marginLeft="33dp"
+-        android:layout_marginRight="32dp"
+-        android:layout_marginStart="33dp"
++        android:layout_height="31dp"
++        android:layout_marginBottom="8dp"
++        android:layout_marginEnd="58dp"
++        android:layout_marginLeft="58dp"
++        android:layout_marginRight="58dp"
++        android:layout_marginStart="58dp"
+         app:layout_constraintBottom_toTopOf="@+id/randomBtn"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent" />
+ 
+-
+-    <android.support.constraint.Guideline
+-        android:id="@+id/guideline"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:orientation="vertical"
+-        app:layout_constraintGuide_end="395dp" />
+-
+-    <android.support.constraint.Guideline
+-        android:id="@+id/guideline2"
++    <EditText
++        android:id="@+id/passwordLength"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:orientation="horizontal"
+-        app:layout_constraintGuide_begin="31dp" />
+-
+-    <TextView
+-        android:id="@+id/textView"
+-        android:layout_width="wrap_content"
+-        android:layout_height="26dp"
+-        android:text="Password Length"
++        android:layout_marginBottom="23dp"
++        android:layout_marginEnd="122dp"
++        android:layout_marginLeft="123dp"
++        android:layout_marginRight="122dp"
++        android:layout_marginStart="123dp"
++        android:layout_marginTop="116dp"
++        android:ems="10"
++        android:inputType="textPersonName"
++        android:singleLine="false"
++        android:text="PasswordLength"
++        android:textAllCaps="false"
++        android:textAppearance="@style/TextAppearance.AppCompat"
++        android:textStyle="bold"
++        app:layout_constraintBottom_toTopOf="@+id/button2"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+ 
+-    <RadioGroup
+-        android:id="@+id/passLengthGroup"
+-        android:layout_width="180dp"
++    <Button
++        android:id="@+id/button2"
++        android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_alignParentLeft="true"
+-        android:layout_alignParentStart="true"
+-        android:layout_alignParentTop="true"
+-        android:layout_marginBottom="27dp"
+-        android:layout_marginTop="13dp"
+-        app:layout_constraintBottom_toTopOf="@+id/randomBtn"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/textView">
+-        <!--android:gravity="center_horizontal"-->
+-
+-        <CheckBox
+-            android:id="@+id/checkBox8"
+-            android:layout_width="59dp"
+-            android:layout_height="wrap_content"
+-            android:layout_alignParentLeft="true"
+-            android:layout_alignParentStart="true"
+-            android:layout_marginEnd="313dp"
+-            android:layout_marginLeft="58dp"
+-            android:layout_marginRight="313dp"
+-            android:layout_marginStart="58dp"
+-            android:layout_marginTop="10dp"
+-            android:text="8"
+-            app:layout_constraintBottom_toTopOf="@+id/checkBox16"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+-
+-        <CheckBox
+-            android:id="@+id/checkBox16"
+-            android:layout_width="60dp"
+-            android:layout_height="wrap_content"
+-            android:layout_alignParentLeft="true"
+-            android:layout_alignParentStart="true"
+-            android:layout_marginEnd="305dp"
+-            android:layout_marginLeft="58dp"
+-            android:layout_marginRight="305dp"
+-            android:layout_marginStart="58dp"
+-            android:text="16"
+-            app:layout_constraintBottom_toTopOf="@+id/checkBox32"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
+-        />
+-
+-        <CheckBox
+-            android:id="@+id/checkBox32"
+-            android:layout_width="59dp"
+-            android:layout_height="wrap_content"
+-            android:layout_alignParentLeft="true"
+-            android:layout_alignParentStart="true"
+-            android:layout_marginEnd="305dp"
+-            android:layout_marginLeft="58dp"
+-            android:layout_marginRight="305dp"
+-            android:layout_marginStart="58dp"
+-            android:text="32"
+-            app:layout_constraintBottom_toTopOf="@+id/checkBox64"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/checkBox16" />
+-
+-        <CheckBox
+-            android:id="@+id/checkBox64"
+-            android:layout_width="59dp"
+-            android:layout_height="wrap_content"
+-            android:layout_alignParentLeft="true"
+-            android:layout_alignParentStart="true"
+-            android:layout_marginBottom="165dp"
+-            android:layout_marginEnd="305dp"
+-            android:layout_marginLeft="58dp"
+-            android:layout_marginRight="305dp"
+-            android:layout_marginStart="58dp"
+-            android:text="64"
+-            app:layout_constraintBottom_toTopOf="@+id/TextView"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/checkBox32" />
+-
+-
+-        <android.support.constraint.Guideline
+-            android:id="@+id/guideline3"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:orientation="vertical"
+-            app:layout_constraintGuide_begin="20dp" />
+-
+-        <android.support.constraint.Guideline
+-            android:id="@+id/guideline4"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:orientation="horizontal"
+-            app:layout_constraintGuide_begin="20dp" />
+-
+-
+-    </RadioGroup>
+-
++        android:layout_marginBottom="108dp"
++        android:layout_marginEnd="161dp"
++        android:layout_marginLeft="162dp"
++        android:layout_marginRight="161dp"
++        android:layout_marginStart="162dp"
++        android:layout_marginTop="23dp"
++        android:text="Submit"
++        app:layout_constraintBottom_toTopOf="@+id/TextView"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/passwordLength" />
+ 
+ </android.support.constraint.ConstraintLayout>
+\ No newline at end of file

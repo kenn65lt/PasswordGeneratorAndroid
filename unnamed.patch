@@ -1,0 +1,13 @@
+Index: app/src/main/java/kennedyraine/passwordgen/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/kennedyraine/passwordgen/MainActivity.java	(revision b93e75211bbe44cc3e47262cd7f9111ee1487fc7)
++++ app/src/main/java/kennedyraine/passwordgen/MainActivity.java	(revision c7b53c7cb0310c689cc5dcb31a15cada668f0c65)
+@@ -28,3 +28,4 @@
+ //    EditText e = (EditText) findViewById(R.id.editText);
+ //    e.("New Text");
+ }
++s
+\ No newline at end of file

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <Button
+        android:id="@+id/randomBtn"
+        android:layout_width="242dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="55dp"
+        android:text="Generate Password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_marginBottom="7dp"
+        android:gravity="center"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintBottom_toTopOf="@+id/randomBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="122dp"
+        android:layout_marginTop="244dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="212dp"
+            tools:layout_editor_absoluteY="184dp">
+
+            <TextView
+                android:id="@+id/pLengthTxt"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:text="Password Length:" />
+
+            <TextView
+                android:id="@+id/specTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:text="Include Special Characters:" />
+
+            <TextView
+                android:id="@+id/numTxt"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:text="Include Numbers:" />
+
+            <TextView
+                android:id="@+id/upperTxt"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:text="Include Uppercase:" />
+
+            <TextView
+                android:id="@+id/lowerText"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:text="Include Lowercase:" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="202dp"
+            tools:layout_editor_absoluteY="122dp">
+
+            <Spinner
+                android:id="@+id/password_length"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                tools:layout_editor_absoluteX="152dp"
+                tools:layout_editor_absoluteY="158dp" />
+
+            <CheckBox
+                android:id="@+id/specialsCheck"
+                android:layout_width="match_parent"
+                android:layout_height="26dp" />
+
+            <CheckBox
+                android:id="@+id/numCheck"
+                android:layout_width="match_parent"
+                android:layout_height="26dp" />
+
+            <CheckBox
+                android:id="@+id/upperCheck"
+                android:layout_width="match_parent"
+                android:layout_height="26dp" />
+
+            <CheckBox
+                android:id="@+id/lowerCheck"
+                android:layout_width="match_parent"
+                android:layout_height="26dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="374dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="202dp" />
+
+
+</android.support.constraint.ConstraintLayout>
