@@ -36,23 +36,6 @@ int passwordLength;
 
 
 
-<<<<<<< HEAD
-public class MainActivity extends AppCompatActivity {
-    TextView txt;
-    Button btn;
-    private RadioGroup passLengthGroup;
-    private RadioButton radio8;
-    private RadioButton radio16;
-    private RadioButton radio32;
-    private RadioButton radio64;
-
-    double num8;
-    double num16;
-    double num32;
-    double num64;
-    int passwordLength;
-=======
->>>>>>> MainMaster
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,66 +105,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-<<<<<<< HEAD
-        //Listener for RadioButtons
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int checkedBox = passLengthGroup.getCheckedRadioButtonId();
-
-                switch(checkedBox){
-                    case R.id.radio8:
-                        if (radio8.isChecked()){
-                            passwordLength = 8;
-//                            String d = Double.toString(passwordLength);
-//                            txt.setText(d);
-                            generate.getLowerLetters(passwordLength/4);
-                            generate.getNum(passwordLength/4);
-                            generate.getSpecial(passwordLength/4);
-                            generate.getUpperLetters(passwordLength/4);
-
-
-                        }
-                        break;
-                    case R.id.radio16:
-                        if (radio16.isChecked()) {
-                            passwordLength = 16;
-                            generate.getLowerLetters(passwordLength/4);
-                            generate.getNum(passwordLength/4);
-                            generate.getSpecial(passwordLength/4);
-                            generate.getUpperLetters(passwordLength/4);
-                        }
-                        break;
-                    case R.id.radio32:
-                        if (radio32.isChecked()){
-                            passwordLength = 32;
-                            generate.getLowerLetters(passwordLength/4);
-                            generate.getNum(passwordLength/4);
-                            generate.getSpecial(passwordLength/4);
-                            generate.getUpperLetters(passwordLength/4);
-                        }
-                        break;
-                    case R.id.radio64:
-                        if (radio64.isChecked()){
-                            passwordLength = 64;
-                            generate.getLowerLetters(passwordLength/4);
-                            generate.getNum(passwordLength/4);
-                            generate.getSpecial(passwordLength/4);
-                            generate.getUpperLetters(passwordLength/4);
-                        }
-                        break;
-=======
     }
-<<<<<<< HEAD
->>>>>>> MainMaster
 
 
 
 
 }
-=======
-//    EditText e = (EditText) findViewById(R.id.editText);
-//    e.("New Text");
-}
-dsdf
->>>>>>> Patch2
