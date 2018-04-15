@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -23,12 +24,11 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity{
 
-    TextView txt, pWordTxt;
-    Button btn, copyBtn;
+    TextView txt;
+    Button btn;
 
-//    int passwordLength = 0;
-//    String spinnerText = "";
-int passwordLength;
+
+    int passwordLength;
     CheckBox numsCheck;
     CheckBox specialsCheck;
     CheckBox upperCheck;
@@ -54,53 +54,68 @@ int passwordLength;
 // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
-
-
-
+        ImageButton clipBtn = (ImageButton) findViewById(R.id.clipboardBtn);
         btn.setOnClickListener(new View.OnClickListener() {
             Spinner spin = (Spinner) findViewById(R.id.password_length);
-
-
             @Override
             public void onClick(View view) {
+
+                //Checking the chekbox and setting values for it. Ifs are better to use in this case rather than using
+                //Switch statements
                 RandomGenerate generate = new RandomGenerate();
+                String passwordString = spin.getSelectedItem().toString();
+                //Parsing string password to int
+                passwordLength = Integer.parseInt(passwordString);
+                generate.setPassword(passwordLength);
+
                 numsCheck = (CheckBox) findViewById(R.id.numCheck);
                 if (numsCheck.isChecked()){
                     String nums = "1234567890";
                     generate.setNum(nums);
-                } else{
-                    generate.setNum("");
                 }
                 upperCheck = (CheckBox) findViewById(R.id.upperCheck);
                 if (upperCheck.isChecked()){
                     String upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                     generate.setUpperLetters(upperLetters);
-                }else{
-                    generate.setSpecials("");
                 }
                 lowerCheck = (CheckBox) findViewById(R.id.lowerCheck);
                 if (lowerCheck.isChecked()){
                     String lowerCase = "abcdefghijklmnopqrstuvwxyz";
                     generate.setLowers(lowerCase);
-                }else{
-                    generate.setLowers("");
                 }
                 specialsCheck = (CheckBox) findViewById(R.id.specialsCheck);
                 if (specialsCheck.isChecked()){
                     String specials = "!@#$%&*()_+-=[]|,./?><";
                     generate.setSpecials(specials);
-                }else{
-                    generate.setSpecials("");
                 }
 
-                String passwordString = spin.getSelectedItem().toString();
-                //Parsing string password to int
-                 passwordLength = Integer.parseInt(passwordString);
-                 generate.setPassword(passwordLength);
 
-                 txt.setText(generate.getMerged());
-//                 txt.setText(generate.getMerged());
+                //If the checkboxes are not checked then tell user it is unchecked.
+                if(!numsCheck.isChecked() && !upperCheck.isChecked() &&
+                        !lowerCheck.isChecked() && !specialsCheck.isChecked() ){
+                    txt.setText("None of the options are selected.");
+                } else {
+                    txt.setText(generate.getMerged());
+                }
+            }
+        });
 
+        //Clipboard
+        clipBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Code to Copy the content of Text View to the Clip board.
+                ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText("simple text", txt.getText());
+                clipboard.setPrimaryClip(clip);
+
+                Toast.makeText(getApplicationContext(), "Password Copied to Clipboard",
+                        Toast.LENGTH_LONG).show();
+
+                //For pasting purposes/debugging
+//                ClipData.Item item = clipboard.getPrimaryClip().getItemAt(0);
+//                String pasteData = item.getText().toString();
+//                btn.setText(pasteData);
             }
         });
 

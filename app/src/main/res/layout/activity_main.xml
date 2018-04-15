@@ -12,32 +12,38 @@
         android:id="@+id/randomBtn"
         android:layout_width="242dp"
         android:layout_height="73dp"
-        android:layout_marginBottom="55dp"
+        android:layout_marginBottom="26dp"
         android:text="Generate Password"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="63dp"
-        android:layout_marginBottom="7dp"
+        android:layout_width="334dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="37dp"
         android:gravity="center"
         android:text=""
         android:textAppearance="@style/TextAppearance.AppCompat"
-        app:layout_constraintBottom_toTopOf="@+id/randomBtn"
+        app:layout_constraintBottom_toTopOf="@+id/clipboardBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="122dp"
-        android:layout_marginTop="244dp"
+        android:layout_height="129dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="33dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/TextView"
+        app:layout_constraintBottom_toTopOf="@+id/randomBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -121,13 +127,6 @@
     </LinearLayout>
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="374dp" />
-
-    <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -139,7 +138,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="202dp" />
+        app:layout_constraintGuide_begin="-27dp" />
+
+    <ImageButton
+        android:id="@+id/clipboardBtn"
+        android:layout_width="81dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="228dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="?attr/actionModeCopyDrawable" />
 
 
 </android.support.constraint.ConstraintLayout>

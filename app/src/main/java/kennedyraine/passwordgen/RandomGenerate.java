@@ -3,9 +3,8 @@ package kennedyraine.passwordgen;
 import java.util.Random;
 
 
-public class RandomGenerate extends MainActivity {
+public class RandomGenerate {
     public int pWordLength = 0;
-    public int characterCount = 0;
 
     String lowerCase = "";
     String upperLetters = "";
@@ -20,7 +19,7 @@ public class RandomGenerate extends MainActivity {
     public void setPassword(int pWordLength){
         this.pWordLength = pWordLength;
     }
-    public int getPassword(){
+    private int getPassword(){
         return this.pWordLength;
     }
 
@@ -34,24 +33,24 @@ public class RandomGenerate extends MainActivity {
     public void setUpperLetters(String upperLetters){
         this.upperLetters = upperLetters;
     }
-    public String getUpperLetters(){ return this.upperLetters;}
+    private String getUpperLetters(){ return this.upperLetters;}
 
     //Setter and getter for Special letters
     public void setSpecials(String specials){
         this.specials = specials;
     }
-    public String getSpecial(){return this.specials;}
+    private String getSpecial(){return this.specials;}
 
     //Setters and getters for nums
     public void setNum(String nums){
         this.nums = nums;
     }
-    public String getNums(){return this.nums;}
+    private String getNums(){return this.nums;}
 
 
+    //Merging all the characters together and randomizing it
     public String getMerged() {
-//        String merged = getLowerLetters() + getSpecial() + getUpperLetters() + getNums();
-        String merged = nums + upperLetters + lowerCase+ getSpecial();
+        String merged = getNums() + getUpperLetters() + getLowerLetters() + getSpecial();
         StringBuilder chars = new StringBuilder();
         Random rnd = new Random();
 
